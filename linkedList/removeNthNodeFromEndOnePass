@@ -1,0 +1,16 @@
+var removeNthFromEnd = function (head, n) {
+  let sentinal = new ListNode();
+  sentinal.next = head;
+  let s = sentinal;
+  let f = s;
+  for (let i = 0; i < n; i++) {
+    f = f.next;
+  }
+  while (f != null && f.next != null) {
+    s = s.next;
+    f = f.next;
+  }
+  s.next = s.next.next;
+  return sentinal.next;
+};
+//removeNthFromEnd([1,2,3,4,5], 2);
