@@ -13,4 +13,4 @@ var removeNthFromEnd = function (head, n) {
   s.next = s.next.next;
   return sentinal.next;
 };
-//removeNthFromEnd([1,2,3,4,5], 2);
+//removeNthFromEnd([1,2,3,4,5], 2); //T=O(n), S=O(1)
