@@ -24,3 +24,37 @@ console.log(searchRange([5,7,7,8,8,10], 6));
 console.log(searchRange([], 0));
 //Time complexity: O(log n)
 //Space complexity: O(1)
+
+
+var searchRange = function(arr, target) {
+    let l = 0;
+    let r = arr.length - 1;
+    let res = [-1, -1];
+    while (l <= r) {
+        let m = l + Math.floor((r - l) / 2);
+        if (arr[m] < target) l = m + 1;
+        else if (arr[m] > target) r = m - 1;
+        else if (arr[m] === target){
+            res[0] = m;
+            r = m - 1;
+        }
+    }
+
+    l = 0;
+    r = arr.length - 1;
+    while (l <= r) {
+        let m = l + Math.floor((r - l) / 2);
+        if (arr[m] < target) l = m + 1;
+        else if (arr[m] > target) r = m - 1;
+        else if (arr[m] === target){
+            res[1] = m;
+            l = m + 1;
+        }
+    }
+    return res;
+};
+console.log(searchRange([5,7,7,8,8,10], 8));
+console.log(searchRange([5,7,7,8,8,10], 6));
+console.log(searchRange([], 0));
+//Time complexity: O(log n)
+//Space complexity: O(1)
