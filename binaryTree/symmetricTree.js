@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 //Recursive
 var isSymmetric = function(root) {
     var isMirror = (p1, p2) => {
@@ -12,6 +14,7 @@ var isSymmetric = function(root) {
 
 //Iterative
 var isSymmetric = function(root) {
+    if(!root) return true;
     let q = [root.left, root.right];
     while(q.length){
         let p1 = q.shift();

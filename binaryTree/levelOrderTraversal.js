@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 var levelOrder = function (root) {
   if (!root) return [];
   let q = [root];
@@ -10,6 +12,20 @@ var levelOrder = function (root) {
   }
   return res;
 };
+
+// var levelOrder = function(root) {
+//     if(!root) return [];
+//     let res = [];
+//     let traversal = (curr, level) => {
+//         res.push(curr.val);
+//         curr.left && traversal(curr.left, level+1);
+//         curr.right && traversal(curr.right, level+1);
+//     }
+//     traversal(root, 0);
+//     return res;
+// };
+
+
 let root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
 console.log(levelOrder(root)); // Output: [1, 2, 3]
 console.log(levelOrder(null)); // Output: []
@@ -17,7 +33,7 @@ console.log(
   levelOrder(
     new TreeNode(1, new TreeNode(2, new TreeNode(3), null), new TreeNode(4))
   )
-); // Output: [1, 2, 3, 4]
+); // Output: [1, 2, 4, 3]
 console.log(
   levelOrder(
     new TreeNode(
@@ -30,4 +46,4 @@ console.log(
       new TreeNode(3, null, new TreeNode(8, new TreeNode(9), null))
     )
   )
-); // Output: [1, 2, 4, 5, 6, 7, 3, 8, 9]
+); // Output: [1, 2, 3, 4, 5, 8, 6, 7, 9]

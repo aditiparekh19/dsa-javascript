@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 //Two Stack Approach
 var postorderTraversal = function (root) {
   if (!root) return [];

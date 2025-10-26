@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 var isBalanced = function(root) {
     let res = true;
     let calculateHeight = (curr) => {

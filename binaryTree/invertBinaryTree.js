@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 var invertTree = function(root) {
     if(!root) return root;
     let temp = root.left;

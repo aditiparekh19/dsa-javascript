@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 var preorderTraversal = function(root) {
     if(!root) return [];
     let res = []; let s = [root];

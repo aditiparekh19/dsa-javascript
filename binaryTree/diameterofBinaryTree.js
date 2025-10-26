@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 var diameterOfBinaryTree = function(root) {
     let maxDiameter = 0;
     let findDepth = (curr) => {

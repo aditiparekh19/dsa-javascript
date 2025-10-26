@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 //TopDown
 var hasPathSum = function(root, targetSum) {
     if(!root) return 0;

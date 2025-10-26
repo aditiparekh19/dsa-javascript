@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 var inorderTraversal = function(root) {
     let res=[]; let stack=[];
     let curr = root;

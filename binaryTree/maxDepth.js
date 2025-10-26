@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 // TopDown 
 var maxDepth = function(root) {
     if(!root) return 0;

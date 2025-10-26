@@ -1,3 +1,5 @@
+import { TreeNode } from "./TreeNode.js";
+
 var postorderTraversal = function(root) {
     let res=[];
     function traversal(curr){
