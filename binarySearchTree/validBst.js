@@ -6,8 +6,8 @@ var isValidBST = function (root) {
     if ((l != null && curr.val <= l) || (h != null && curr.val >= h))
       return false;
 
-    isLeftBst = isBst(curr.left, l, curr.val);
-    isRightBst = isBst(curr.right, curr.val, h);
+    let isLeftBst = isBst(curr.left, l, curr.val);
+    let isRightBst = isBst(curr.right, curr.val, h);
 
     return isLeftBst && isRightBst;
   };
